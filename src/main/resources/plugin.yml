@@ -1,0 +1,6 @@
+name: LumberTycoonPlugin
+version: '${project.version}'
+main: com.supdapillar.lumbertycoon.LumberTycoonPlugin
+api-version: '1.20'
+authors: [Supdapillar]
+description: Minecraft tycoon minigame using spigot
