@@ -21,7 +21,21 @@ public class TickRunnable extends BukkitRunnable{
                 Item item = (Item) entity;
 
                 if (item.getLocation().add(0,-1,0) .getBlock().getType() == Material.MAGENTA_GLAZED_TERRACOTTA){
-                    item.setVelocity(new Vector(1,0,0));
+                    Block block = item.getLocation().add(0,-1,0) .getBlock();
+                    switch  (block.getFace(block)){
+                        case NORTH:
+                            item.setVelocity(new Vector(0,0,0.25));
+                            break;
+                        case EAST:
+                            item.setVelocity(new Vector(-0.25,0,0));
+                            break;
+                        case SOUTH:
+                            item.setVelocity(new Vector(0,0,-0.25));
+                            break;
+                        case WEST:
+                            item.setVelocity(new Vector(0.25,0,0));
+                            break;
+                    }
                 }
 
 
