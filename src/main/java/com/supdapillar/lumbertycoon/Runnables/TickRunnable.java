@@ -22,7 +22,9 @@ public class TickRunnable extends BukkitRunnable{
 
                 if (item.getLocation().add(0,-1,0) .getBlock().getType() == Material.MAGENTA_GLAZED_TERRACOTTA){
                     Block block = item.getLocation().add(0,-1,0) .getBlock();
-                    switch  (block.getFace(block)){
+                    item.setVelocity(block.getFace(block).getDirection());
+                    /*switch  (){
+
                         case NORTH:
                             item.setVelocity(new Vector(0,0,0.25));
                             break;
@@ -35,7 +37,7 @@ public class TickRunnable extends BukkitRunnable{
                         case WEST:
                             item.setVelocity(new Vector(0.25,0,0));
                             break;
-                    }
+                    }*/
                 }
 
 
