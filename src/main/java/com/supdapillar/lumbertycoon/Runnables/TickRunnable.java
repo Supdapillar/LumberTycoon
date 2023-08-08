@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.BlockState;
+import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -22,8 +23,8 @@ public class TickRunnable extends BukkitRunnable{
 
                 if (item.getLocation().add(0,-1,0) .getBlock().getType() == Material.MAGENTA_GLAZED_TERRACOTTA){
                     Block block = item.getLocation().add(0,-1,0) .getBlock();
-                    item.setVelocity(block.getFace(block).getDirection());
-                    /*switch  (){
+                    Directional DirBlock = (Directional) block;
+                    switch  (DirBlock.getFacing()){
 
                         case NORTH:
                             item.setVelocity(new Vector(0,0,0.25));
@@ -37,7 +38,7 @@ public class TickRunnable extends BukkitRunnable{
                         case WEST:
                             item.setVelocity(new Vector(0.25,0,0));
                             break;
-                    }*/
+                    }
                 }
 
 
