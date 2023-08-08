@@ -17,7 +17,8 @@ public class PlayerMovementListener implements Listener {
     public void OnPlayerMove(PlayerMoveEvent event){
         if(event.getPlayer().isInsideVehicle()){
             Vehicle vehicle = (Vehicle) event.getPlayer().getVehicle();
-            vehicle.setVelocity(new Vector(0,1,0));
+            float angle =    event.getPlayer().getLocation().getYaw();
+            vehicle.setVelocity(new Vector(Math.sin(angle)*2,0,Math.cos(angle)*2));
         }
     }
 }
