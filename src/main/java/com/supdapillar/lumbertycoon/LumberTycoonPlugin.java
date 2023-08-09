@@ -12,6 +12,7 @@ public final class LumberTycoonPlugin extends JavaPlugin {
         new TickRunnable().runTaskTimer(this,0,1);
 
         new PlayerMovementListener(this);
+        ScoreboardHandler.startScoreboard();
     }
 
     @Override
