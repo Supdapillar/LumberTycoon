@@ -26,7 +26,6 @@ public class TickRunnable extends BukkitRunnable{
 
                         if(block.getBlockData() instanceof Directional) {
                             Directional bmeta = (Directional) block.getBlockData();
-                            Bukkit.broadcastMessage("PLACE:brownM "+bmeta.getFacing());
                             switch  (bmeta.getFacing()){
 
                                 case NORTH:

@@ -1,4 +1,4 @@
-package com.supdapillar.lumbertycoon;
+package com.supdapillar.lumbertycoon.Helpers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.scoreboard.*;
